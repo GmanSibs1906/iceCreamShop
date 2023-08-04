@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bad+Script&family=Tangerine:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;600&family=Square+Peg&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comforter&family=Merienda:wght@300;600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font awesome -->
+    <script
+      src="https://kit.fontawesome.com/0f183b565a.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Ice Cream</title>
+  </head>
+  <body>
+    <div class="container">
+      <!-- NavBar -->
+      <nav class="navBar">
+        <img src="images/logo.png" alt="logo" class="logo" />
+        <div class="right">
+          <div class="userLogo">
+            <img src="images/user.png" alt="user image" class="user" />
+          </div>
+          <div class="basket">
+            <div class="quantity" id="cartItemCount"></div>
+            <i
+              class="fa-solid fa-basket-shopping fa-fade fa-lg"
+              style="color: #94004f"
+              id="openModalBtn"
+            ></i>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Hero -->
+      <section class="heroContainer">
+        <div class="hero">
+          <div class="heroText">
+            <h1>fruit ice creams</h1>
+            <p>nothing tastes better</p>
+          </div>
+          <img src="images/hero.jpg" alt="" class="heroImage" />
+        </div>
+      </section>
+
+      <!-- Shop -->
+      <section class="shop">
+        <!-- menu bar -->
+        <div class="menu">
+          <h3 class="menuHeading">Menu</h3>
+
+          <div class="mulberryMenu" onclick="showImage('mulberryImg')">
+            <div class="menuItem">
+              <img src="images/mulberry-menu.png" alt="" />
+              <p>Mulberry</p>
+            </div>
+          </div>
+          <div class="cherryMenu" onclick="showImage('cherryImg')">
+            <div class="menuItem">
+              <img src="images/cherry-menu.png" alt="" />
+              <p>Cherry</p>
+            </div>
+          </div>
+          <div class="peachMenu" onclick="showImage('peachImg')">
+            <div class="menuItem">
+              <img src="images/peach-menu.png" alt="" />
+              <p>Peach</p>
+            </div>
+          </div>
+          <div class="granadillaMenu" onclick="showImage('granadillaImg')">
+            <div class="menuItem">
+              <img src="images/granadilla-menu.png" alt="" />
+              <p>Granadilla</p>
+            </div>
+          </div>
+          <div class="bananaMenu" onclick="showImage('bananaImg')">
+            <div class="menuItem">
+              <img src="images/banana-menu.png" alt="" />
+              <p>Banana</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- left section for images -->
+        <div class="shopSections">
+          <div class="innerContainer mulberryImg">
+            <img
+              src="images/marlberry.png"
+              alt="mulberry icecream"
+              class="icecream"
+            />
+          </div>
+          <div class="innerContainer cherryImg">
+            <img
+              src="images/cherry.png"
+              alt="mulberry icecream"
+              class="icecream"
+            />
+          </div>
+          <div class="innerContainer peachImg">
+            <img
+              src="images/peach.png"
+              alt="mulberry icecream"
+              class="icecream peachImage"
+            />
+          </div>
+          <div class="innerContainer granadillaImg">
+            <img
+              src="images/granadilla.png"
+              alt="mulberry icecream"
+              class="imgGranadila"
+            />
+          </div>
+          <div class="innerContainer bananaImg">
+            <img
+              src="images/banana-chocolate.png"
+              alt="mulberry icecream"
+              class="icecream"
+            />
+          </div>
+        </div>
+
+        <!-- Right section for text -->
+        <div class="shopSections rightSection">
+          <div class="innerContainerRight menuRight">
+            <!-- mulberry text -->
+            <div class="marlberry" id="marlberry">
+              <div class="name">
+                <img
+                  src="images/mulberry-menu.png"
+                  alt=""
+                  id="imageId-marlberry"
+                />
+                <h3 id="productName-marlberry">Marlberry Ice Cream</h3>
+              </div>
+
+              <div class="bottom">
+                <div class="info">
+                  This EASY mulberry ice cream has just 6 ingredients (one of
+                  them being mulberries, and 2 of the ingredients are optional).
+                  The ice cream is made by making a really concentration
+                  mulberry syrup (which is one of my most popular mulberry
+                  recipes!), and combining that syrup with heavy cream, milk,
+                  and vanilla extract.
+                </div>
+
+                <div class="buttons">
+                  <span id="productPrice-marlberry" class="productPrice"
+                    >25</span
+                  >
+                  <div class="price">R25.00</div>
+                  <!-- <div class="quantitySelect">
+                                    <i class="fa-solid fa-minus fa-xl subtractBtn mulberrySubBtn" style="color: #b21c3e;"></i>
+                                    <input type="number" min="0" value="0" class=" quantityInput mulberryQuantityInput">
+                                    <i class="fa-solid fa-plus fa-xl addBtn mulberryAddBtn" style="color: #b21c3e;"></i>
+                                </div> -->
+                  <div class="quantitySelect">
+                    <input
+                      type="number"
+                      class="quantityUserInput"
+                      id="productQuantity-marlberry"
+                      placeholder="Quantity"
+                    />
+                  </div>
+                  <div class="price" onclick="addToCart('marlberry')">ADD</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- cherry text -->
+            <div class="cherry" id="cherry">
+              <div class="name">
+                <img src="images/cherry-menu.png" alt="" id="imageId-cherry" />
+                <h3 id="productName-cherry">Cherry Ice Cream</h3>
+              </div>
+
+              <div class="bottom">
+                <div class="info">
+                  Cherry ice cream is a common ice cream flavor, prepared using
+                  typical ice cream ingredients and cherries. Various types of
+                  cherries and cherry cultivars are used. In the United States,
+                  where the flavor is especially popular, it has been
+                  mass-produced since at least 1917.
+                </div>
+
+                <div class="buttons">
+                  <span id="productPrice-cherry" class="productPrice">28</span>
+                  <div class="price">R28.00</div>
+                  <!-- <div class="quantitySelect">
+                                    <i class="fa-solid fa-minus fa-xl subtractBtn cherrySubBtn" style="color: #c60019;"></i>
+                                    <input type="number" min="0" value="0" class="quantityInput cherryQuantityInput">
+                                    <i class="fa-solid fa-plus fa-xl addBtn cherryAddBtn" style="color: #c60019;"></i>
+                                </div> -->
+                  <div class="quantitySelect">
+                    <input
+                      type="number"
+                      class="quantityUserInput"
+                      id="productQuantity-cherry"
+                      placeholder="Quantity"
+                    />
+                  </div>
+                  <div class="price" onclick="addToCart('cherry')">ADD</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- peach text -->
+            <div class="peach" id="peach">
+              <div class="name">
+                <img src="images/peach-menu.png" alt="" id="imageId-peach" />
+                <h3 id="productName-peach">Peach Ice Cream</h3>
+              </div>
+
+              <div class="bottom">
+                <div class="info">
+                  Nothing says summer like creamy Homemade Peach Ice Cream made
+                  with simple ingredients like heavy cream, whole milk, sugar,
+                  eggs, and fresh, ripe peaches. The sweet taste of peaches and
+                  cream shine in this summertime favorite.
+                </div>
+
+                <div class="buttons">
+                  <span id="productPrice-peach" class="productPrice">24</span>
+                  <div class="price">R24.00</div>
+                  <!-- <div class="quantitySelect">
+                                    <i class="fa-solid fa-minus fa-xl subtractBtn peachSubBtn" style="color: #e7bf3f;"></i>
+                                    <input type="number" min="0" value="0" class="quantityInput peachQuantityInput">
+                                    <i class="fa-solid fa-plus fa-xl addBtn peachAddBtn" style="color: #e7bf3f;"></i>
+                                </div> -->
+                  <div class="quantitySelect">
+                    <input
+                      type="number"
+                      class="quantityUserInput"
+                      id="productQuantity-peach"
+                      placeholder="Quantity"
+                    />
+                  </div>
+                  <div class="price" onclick="addToCart('peach')">ADD</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- granadilla text -->
+            <div class="granadilla" id="granadilla">
+              <div class="name">
+                <img
+                  src="images/granadilla-menu.png"
+                  alt=""
+                  id="imageId-granadilla"
+                />
+                <h3 id="productName-granadilla">Granadilla Ice Cream</h3>
+              </div>
+
+              <div class="bottom">
+                <div class="info">
+                  Granadillas belong to the passion fruit and tumbos family, but
+                  has a very sweet and delicate flavor instead. The color of its
+                  pulp is different as well, almost transparent, far from the
+                  intense orange of passion fruit.
+                </div>
+
+                <div class="buttons">
+                  <span id="productPrice-granadilla" class="productPrice"
+                    >22</span
+                  >
+                  <div class="price">R22.00</div>
+                  <!-- <div class="quantitySelect">
+                                    <i class="fa-solid fa-minus fa-xl subtractBtn granadillaSubBtn" style="color: #00e1ff;"></i>
+                                    <input type="number" min="0" value="0" class="quantityInput granadillaQuantityInput">
+                                    <i class="fa-solid fa-plus fa-xl addBtn granadillaAddBtn" style="color: #00e1ff;"></i>
+                                </div> -->
+                  <div class="quantitySelect">
+                    <input
+                      type="number"
+                      class="quantityUserInput"
+                      id="productQuantity-granadilla"
+                      placeholder="Quantity"
+                    />
+                  </div>
+                  <div class="price" onclick="addToCart('granadilla')">ADD</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- banana text -->
+            <div class="banana" id="banana">
+              <div class="name">
+                <img src="images/banana-menu.png" alt="" id="imageId-banana" />
+                <h3 id="productName-banana">Banana Ice Cream</h3>
+              </div>
+
+              <div class="bottom">
+                <div class="info">
+                  Banana ice cream is much lower in fat and calories than
+                  regular ice cream. It also is made with less ingredients and
+                  has no added sugar, while regular ice cream has added sugar to
+                  it.
+                </div>
+
+                <div class="buttons">
+                  <span id="productPrice-banana" class="productPrice">26</span>
+                  <div class="price">R26.00</div>
+                  <!-- <div class="quantitySelect">
+                                    <i class="fa-solid fa-minus fa-xl subtractBtn bananaSubBtn" style="color: #27c500;"></i>
+                                    <input type="number" min="0" value="0" class="quantityInput bananaQuantityInput">
+                                    <i class="fa-solid fa-plus fa-xl addBtn bananaAddBtn" style="color: #27c500;"></i>
+                                </div> -->
+                  <div class="quantitySelect">
+                    <input
+                      type="number"
+                      class="quantityUserInput"
+                      id="productQuantity-banana"
+                      placeholder="Quantity"
+                    />
+                  </div>
+                  <div class="price" onclick="addToCart('banana')">ADD</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- modal -->
+      <section class="modal-bg" id="modalBg">
+        <div class="modal">
+          <div class="modalDetails">
+            <!-- personal links lest section -->
+            <div class="personalInfo">
+              <div class="contact">
+                <div class="projectsHeader">Recent Projects</div>
+                <div class="projects">
+                  <a
+                    class="boostrap"
+                    href="https://cheerful-taffy-bd478c.netlify.app/"
+                    target="_blank"
+                  >
+                    <img src="images/boot.jpg" alt="" class="projectImg" />
+                  </a>
+                  <a
+                    class="cv"
+                    href="http://gmanscv.s3-website.eu-north-1.amazonaws.com"
+                    target="_blank"
+                  >
+                    <img src="images/cv.jpg" alt="" class="projectImg" />
+                  </a>
+                  <a
+                    class="cakeShop"
+                    href="https://gmansibs1906.github.io/index.html"
+                    target="_blank"
+                  >
+                    <img src="images/cake.jpg" alt="" class="projectImg" />
+                  </a>
+                </div>
+
+                <a
+                  class="linkedin pageLinks"
+                  href="https://www.linkedin.com/in/gladman-sibanda-188a31272/"
+                  target="_blank"
+                >
+                  <img src="images/linkedin.png" alt="" class="contactImg" />
+                  <span>LinkedIn</span>
+                </a>
+                <a
+                  class="github pageLinks"
+                  href="https://github.com/GmanSibs1906"
+                  target="_blank"
+                >
+                  <img src="images/github.png" alt="" class="contactImg" />
+                  <span>Github</span>
+                </a>
+
+                <p class="about">Designed and built by <b>Gman</b></p>
+              </div>
+            </div>
+
+            <!-- right side cart products  -->
+            <div class="cartProducts">
+              <div id="productList">
+                <!-- product from JavaScript -->
+              </div>
+              <div id="cartTotal">
+                <!-- cart total from JavaScript -->
+              </div>
+              <button class="clearBtn" onclick="clearCart()">Clear Cart</button>
+            </div>
+          </div>
+          <button id="closeModalBtn">Close</button>
+        </div>
+      </section>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
